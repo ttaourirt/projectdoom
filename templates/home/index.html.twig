@@ -1,0 +1,133 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenue Voyageur !
+{% endblock %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" type="text/css" href="css/home.css">
+{% endblock %}
+
+{% block body %}
+  <header>
+    <h1>
+      {{ title1 }}</h1>
+    <p>
+      During this journey that will take you days around the world you will have to find the keys of knowledge to find your way through this forgotten world and the Secret of Mysandria the Lost City will be revealed to you.</p>
+  </header>
+  <nav>
+    <div class="main_nav">
+      <img class="menuIcon btnClick" src="images/hold.png" data-target="#nav_block">
+      <div class="menuLateralBar btnHover" data-target="#nav_block"></div>
+      <ul class="nav_block wrapper" id="nav_block">
+        <li class="nav_item">
+          <a class="btnClick" href="#" data-target="#snav_block">COMPETENCES</a>
+          <ul class="sous_nav_block" id="snav_block">
+            <li class="sous_nav_item">
+              <span>
+                <a href="#">jeu 1</a>
+              </span>
+            </li>
+            <li class="sous_nav_item">
+              <a href="#">jeu 2</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav_item">
+          <a class="btnClick" href="#" data-target="#snav_block1">OUTILS</a>
+          <ul class="sous_nav_block" id="snav_block1">
+            <li class="sous_nav_item">
+              <a href="#">jeu 4</a>
+            </li>
+            <li class="sous_nav_item">
+              <a href="#">jeu 5</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav_item">
+          <a class="btnClick" href="#" data-target="#snav_block2">FORMATION</a>
+          <ul class="sous_nav_block" id="snav_block2">
+            <li class="sous_nav_item">
+              <a href="#">jeu 76</a>
+            </li>
+            <li class="sous_nav_item">
+              <a href="#">jeu 6</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav_item">
+          <a class="btnClick" href="#" data-target="#snav_block3">FORMATION</a>
+          <ul class="sous_nav_block" id="snav_block3">
+            <li class="sous_nav_item">
+              <a href="#">jeu 52</a>
+            </li>
+            <li class="sous_nav_item">
+              <a href="#">jeu 87</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav_item">
+          <a class="btnClick" href="#" data-target="#snav_block4">HOBBIES</a>
+          <ul class="sous_nav_block" id="snav_block4">
+            <li class="sous_nav_item">
+              <a href="#">jeu 95</a>
+            </li>
+            <li class="sous_nav_item">
+              <a href="#">jeu 254</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav_item">
+          <a class="btnClick" href="#" data-target="#snav_block5">LANGUES</a>
+          <ul class="sous_nav_block" id="snav_block5">
+            <li class="sous_nav_item">
+              <a href="#">jeu 98</a>
+            </li>
+            <li class="sous_nav_item">
+              <a href="#">jeu 22</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav_item">
+          <a class="btnClick" href="#" data-target="#snav_block6">HOBBIES</a>
+          <ul class="sous_nav_block" id="snav_block6">
+            <li class="sous_nav_item">
+              <a href="#">jeu 95</a>
+            </li>
+            <li class="sous_nav_item">
+              <a href="#">jeu 2588</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav_item">
+          <a class="btnClick" href="#" data-target="#snav_block7">LANGUES</a>
+          <ul class="sous_nav_block" id="snav_block7">
+            <li class="sous_nav_item">
+              <a href="#">jeu 1556</a>
+            </li>
+            <li class="sous_nav_item">
+              <a href="#">jeu 2215</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+
+  </nav>
+
+{% endblock %}
+{% block javascripts %}
+  <script>
+    const BTNCLICKS = document.querySelectorAll('.btnClick');
+    BTNCLICKS.forEach(BTNCLICK => BTNCLICK.addEventListener('click', targetToggle));
+
+    function targetToggle() {
+      const TARGET = document.querySelector(this.dataset.target);
+      TARGET.classList.toggle('active');
+    }
+  </script>
+{% endblock %}
