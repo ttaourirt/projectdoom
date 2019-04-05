@@ -1,6 +1,5 @@
-{% extends 'base.html.twig' %}
 
-{% block title %}Bienvenue Voyageur !
+{% block title %}
 {% endblock %}
 
 {% block stylesheets %}
@@ -12,7 +11,10 @@
     <h1>
       {{ title1 }}</h1>
     <p>
-      During this journey that will take you days around the world you will have to find the keys of knowledge to find your way through this forgotten world and the Secret of Mysandria the Lost City will be revealed to you.</p>
+      During this journey that will take you days around the world you
+       will have to find the keys of knowledge to find your way through
+        this forgotten world and the Secret of Mysandria the Lost City
+         will be revealed to you.</p>
   </header>
   <nav>
     <div class="main_nav">
@@ -20,28 +22,11 @@
       <div class="menuLateralBar btnHover" data-target="#nav_block"></div>
       <ul class="nav_block wrapper" id="nav_block">
         <li class="nav_item">
-          <a class="btnClick" href="#" data-target="#snav_block">COMPETENCES</a>
-          <ul class="sous_nav_block" id="snav_block">
-            <li class="sous_nav_item">
-              <span>
-                <a href="#">jeu 1</a>
-              </span>
-            </li>
-            <li class="sous_nav_item">
-              <a href="#">jeu 2</a>
-            </li>
-          </ul>
+          <a class="btnClick" href="{{ path('home')}}" data-target="#snav_block">HOME</a>
         </li>
         <li class="nav_item">
-          <a class="btnClick" href="#" data-target="#snav_block1">OUTILS</a>
-          <ul class="sous_nav_block" id="snav_block1">
-            <li class="sous_nav_item">
-              <a href="#">jeu 4</a>
-            </li>
-            <li class="sous_nav_item">
-              <a href="#">jeu 5</a>
-            </li>
-          </ul>
+          <a class="btnClick" href="{{ path('home_rank')}}" data-target="#snav_block1">RANKS</a>
+          
         </li>
         <li class="nav_item">
           <a class="btnClick" href="#" data-target="#snav_block2">FORMATION</a>

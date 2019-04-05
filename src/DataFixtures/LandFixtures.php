@@ -16,7 +16,15 @@ class LandFixtures extends Fixture
         // $manager->persist($product);
         $land1 = new Land();
         $land1->setName('Gondor')
-            ->setDescription("le Gondor a été fondé par les frères Isildur et Anárion, fils d'Elendil, exilés du royaume submergé de Númenor et, avec l'Arnor, le royaume créé par Elendil au nord, il a servi de bastion aux Hommes de l'Ouest. Après une première période de croissance, le Gondor a peu à peu décliné tout au long du Troisième Âge, continuellement affaibli par ses confrontations avec les alliés de Sauron. La puissance du Gondor n'est restaurée qu'après la défaite finale de Sauron et le couronnement d'Aragorn.");
+            ->setDescription("Gondor was founded by the brothers Isildur and
+             Anárion, son of Elendil, exiled from the submerged kingdom of
+             Númenor and, with Arnor, the kingdom created by Elendil in the
+             north, it served as a stronghold for Westerners.
+             After an initial period of growth, the Gondor gradually
+             declined throughout the Third Age, continually weakened by
+             its confrontations with Sauron's allies. The power of the Gondor
+             is restored only after Sauron's final defeat and Aragorn's
+             coronation.");
 
         $manager->persist($land1);
         $manager->flush();

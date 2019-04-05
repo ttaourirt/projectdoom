@@ -24,7 +24,7 @@ class Person
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $name;
+    private $lastname;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -46,6 +46,11 @@ class Person
      * @ORM\JoinColumn(nullable=false)
      */
     private $rank;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $image;
 
     public function getId(): ?int
     {
@@ -94,7 +99,7 @@ class Person
     }
 
     public function setLevel(int $level): self
-    {    
+    {
         $this->level = $level;
 
         return $this;
@@ -120,6 +125,18 @@ class Person
     public function setRank(?Rank $rank): self
     {
         $this->rank = $rank;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(?string $image): self
+    {
+        $this->image = $image;
 
         return $this;
     }

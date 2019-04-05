@@ -16,7 +16,8 @@ class GameFixtures extends Fixture implements DependentFixtureInterface
 
         $game1 = new Game();
         $game1->setName('Puzzle')
-            ->setDescription("Retrouve ton chemin en remmttant en place la carte déchirer retrouvé dans la grotte")
+            ->setDescription("Find your way by putting back the tear
+             card found in the cave")
             ->setLand($this->getReference(LandFixtures::LAND_ONE));
 
         $manager->persist($game1);
