@@ -20,44 +20,50 @@ class PersonFixtures extends Fixture implements DependentFixtureInterface
         // $manager->persist($product);
         $person1 = new Person();
         $person1->setPseudo('MOI')
-               ->setName('Pikachu')
+               ->setLastname('Pikachu')
                ->setLevel(100)
                ->setGuild('Pokemon')
                ->setRank($this->getReference(RankFixtures::RANK_ONE))
-               ->setImage('');
+               ->setImage('')
+               ->setUser($this->getReference(UserFixtures::USER_ONE));
 
         $manager->persist($person1);
         $manager->flush();
 
         $person2 = new Person();
         $person2->setPseudo('KAL-EL')
-               ->setName('Clark Kent')
+               ->setLastname('Kent')
+               ->setFirstname('Clark')
                ->setLevel(90)
                ->setGuild('Alien')
                ->setRank($this->getReference(RankFixtures::RANK_TWO))
-               ->setImage('');
+               ->setImage('')
+               ->setUser($this->getReference(UserFixtures::USER_TWO));
 
         $manager->persist($person2);
         $manager->flush();
 
         $person3 = new Person();
         $person3->setPseudo('One-PunchMan')
-               ->setName('Saitama')
+               ->setLastname('Saitama')
                ->setLevel(90)
                ->setGuild('Human')
                ->setRank($this->getReference(RankFixtures::RANK_TWO))
-               ->setImage('');
+               ->setImage('')
+               ->setUser($this->getReference(UserFixtures::USER_THREE));
 
         $manager->persist($person3);
         $manager->flush();
 
         $person4 = new Person();
         $person4->setPseudo('Mugiwara')
-               ->setName('Monkey.D.Luffy')
+               ->setName('Monkey.D')
+               ->setFirstname('Luffy')
                ->setLevel(80)
                ->setGuild('Pirate')
                ->setRank($this->getReference(RankFixtures::RANK_FOUR))
-               ->setImage('');
+               ->setImage('')
+               ->setUser($this->getReference(UserFixtures::USER_FOUR));
 
         $manager->persist($person4);
         $manager->flush();

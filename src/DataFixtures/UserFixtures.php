@@ -14,6 +14,13 @@ class UserFixtures extends Fixture
     const USER_THREE = 'user3';
     const USER_FOUR = 'user4';
 
+    private $passwordEncoder;
+
+    public function __construct(UserPasswordEncoderInterface $passwordEncoder)
+    {
+        $this->passwordEncoder = $passwordEncoder;
+    }
+
     public function load(ObjectManager $manager)
     {
         // $product = new Product();

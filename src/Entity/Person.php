@@ -22,7 +22,7 @@ class Person
     private $pseudo;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $lastname;
 
@@ -52,6 +52,12 @@ class Person
      */
     private $image;
 
+    /**
+     * @ORM\OneToOne(targetEntity="App\Entity\User")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $user;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,14 +75,14 @@ class Person
         return $this;
     }
 
-    public function getName(): ?string
+    public function getLastname(): ?string
     {
-        return $this->name;
+        return $this->lastname;
     }
 
-    public function setName(string $name): self
+    public function setLastname(string $lastname): self
     {
-        $this->name = $name;
+        $this->lastname = $lastname;
 
         return $this;
     }
@@ -137,6 +143,18 @@ class Person
     public function setImage(?string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
 
         return $this;
     }
